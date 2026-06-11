@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+        }
+
+        .contact-form{
+            width:400px;
+            margin:50px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#0077b6;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#023e8a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-form">
+    <h2>Liên Hệ Với Chúng Tôi</h2>
+
+    <form action="https://formsubmit.co/youremail@gmail.com" method="POST">
+
+        <input type="text" name="name" placeholder="Họ và tên" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="text" name="subject" placeholder="Tiêu đề">
+
+        <textarea name="message" rows="5"
+        placeholder="Nhập nội dung liên hệ..." required></textarea>
+
+        <button type="submit">Gửi Liên Hệ</button>
+
+    </form>
+</div>
+
+</body>
+</html>
