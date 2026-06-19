@@ -1,17 +1,707 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <title>Trang chính</title>
-    <meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thực Phẩm Sạch - Website Kinh Doanh Thực Phẩm Sạch</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#2e8b57;
+color:white;
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:yellow;
+}
+
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1542838132-92c53300491e') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+background:rgba(0,0,0,0.5);
+padding:10px;
+}
+
+.hero p{
+font-size:22px;
+background:rgba(0,0,0,0.5);
+padding:10px;
+margin-top:10px;
+}
+
+.btn{
+background:#ff9800;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:5px;
+margin-top:20px;
+display:inline-block;
+}
+
+section{
+padding:70px 50px;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+color:#2e8b57;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+.about-text p{
+line-height:1.8;
+text-align:justify;
+}
+
+.search-box{
+text-align:center;
+margin-bottom:30px;
+}
+
+.search-box input{
+width:60%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.product{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.product h3{
+margin:10px 0;
+}
+
+.price{
+color:red;
+font-size:22px;
+font-weight:bold;
+}
+
+.product button{
+margin-top:10px;
+padding:10px 20px;
+border:none;
+background:#2e8b57;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+.forms{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.form-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-box input,
+.form-box textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.form-box button{
+background:#2e8b57;
+color:white;
+padding:12px;
+width:100%;
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:#2e8b57;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:9999;
+}
+
+.modal-content{
+background:white;
+width:80%;
+max-width:700px;
+margin:5% auto;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.modal-content img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.close{
+float:right;
+font-size:30px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.forms{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.search-box input{
+width:100%;
+}
+
+}
+
+</style>
 </head>
 
 <body>
-    <ul>
-        <li><a href="html/chi-tiet.html">Xem chi tiết sản phẩm hải sản</a></li>
-        <li><a href="html/gioi-thieu.html">Xem giới thiệu về mô hình kinh doanh</a></li>
-        <li><a href="html/lien-he.html">Liên hệ</a></li>
-        <li><a href="html/san-pham.html">Mua sản phẩm ở đây</a></li>
-    </ul>
-</body>
 
+<header>
+
+<div class="logo">
+🌱 THỰC PHẨM SẠCH
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Trang Chủ</a></li>
+<li><a href="#about">Giới Thiệu</a></li>
+<li><a href="#products">Sản Phẩm</a></li>
+<li><a href="#login">Đăng Nhập</a></li>
+<li><a href="#register">Đăng Ký</a></li>
+<li><a href="#contact">Liên Hệ</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<h1>THỰC PHẨM SẠCH</h1>
+
+<p>
+Cung cấp rau củ và thịt sạch chất lượng cao
+</p>
+
+<a href="#products" class="btn">
+Mua Ngay
+</a>
+
+</section>
+<!-- GIỚI THIỆU -->
+
+<section id="about">
+
+<h2 class="section-title">Giới Thiệu Doanh Nghiệp</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+
+<div class="about-text">
+
+<p>
+Website Thực Phẩm Sạch được xây dựng nhằm cung cấp các sản phẩm rau củ và thịt sạch chất lượng cao đến người tiêu dùng. Chúng tôi cam kết mang đến những sản phẩm có nguồn gốc rõ ràng, được kiểm định chất lượng và đảm bảo an toàn vệ sinh thực phẩm.
+</p>
+
+<p>
+Tầm nhìn của chúng tôi là trở thành hệ thống phân phối thực phẩm sạch hàng đầu Việt Nam. Với đội ngũ nhân viên tận tâm cùng quy trình kiểm soát chất lượng nghiêm ngặt, chúng tôi mong muốn góp phần nâng cao sức khỏe cộng đồng.
+</p>
+
+<p>
+Các sản phẩm được nhập trực tiếp từ các trang trại đạt tiêu chuẩn VietGAP và GlobalGAP.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SẢN PHẨM -->
+
+<section id="products">
+
+<h2 class="section-title">Danh Sách Sản Phẩm</h2>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm...">
+</div>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1546470427-e5ac89cd0b6d">
+<h3>Cà Chua Sạch</h3>
+<p class="price">25.000 VNĐ/kg</p>
+<button onclick="showProduct('Cà Chua Sạch','25.000 VNĐ/kg','Rau sạch hữu cơ giàu vitamin C.','https://images.unsplash.com/photo-1546470427-e5ac89cd0b6d')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1447175008436-054170c2e979">
+<h3>Cà Rốt</h3>
+<p class="price">30.000 VNĐ/kg</p>
+<button onclick="showProduct('Cà Rốt','30.000 VNĐ/kg','Giàu vitamin A tốt cho mắt.','https://images.unsplash.com/photo-1447175008436-054170c2e979')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+<h3>Xà Lách</h3>
+<p class="price">20.000 VNĐ/bó</p>
+<button onclick="showProduct('Xà Lách','20.000 VNĐ/bó','Rau xanh tươi sạch mỗi ngày.','https://images.unsplash.com/photo-1512621776951-a57141f2eefd')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0">
+<h3>Dưa Leo</h3>
+<p class="price">18.000 VNĐ/kg</p>
+<button onclick="showProduct('Dưa Leo','18.000 VNĐ/kg','Thanh mát và giàu khoáng chất.','https://images.unsplash.com/photo-1461354464878-ad92f492a5a0')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a">
+<h3>Thịt Gà Sạch</h3>
+<p class="price">120.000 VNĐ/kg</p>
+<button onclick="showProduct('Thịt Gà Sạch','120.000 VNĐ/kg','Thịt gà tươi an toàn thực phẩm.','https://images.unsplash.com/photo-1603048297172-c92544798d5a')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f">
+<h3>Thịt Bò Sạch</h3>
+<p class="price">280.000 VNĐ/kg</p>
+<button onclick="showProduct('Thịt Bò Sạch','280.000 VNĐ/kg','Thịt bò chất lượng cao.','https://images.unsplash.com/photo-1607623814075-e51df1bdc82f')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6">
+<h3>Thịt Heo Sạch</h3>
+<p class="price">150.000 VNĐ/kg</p>
+<button onclick="showProduct('Thịt Heo Sạch','150.000 VNĐ/kg','Nguồn gốc rõ ràng.','https://images.unsplash.com/photo-1602470520998-f4a52199a3d6')">Xem Chi Tiết</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf">
+<h3>Bắp Cải</h3>
+<p class="price">22.000 VNĐ/kg</p>
+<button onclick="showProduct('Bắp Cải','22.000 VNĐ/kg','Rau sạch nhiều chất xơ.','https://images.unsplash.com/photo-1471193945509-9ad0617afabf')">Xem Chi Tiết</button>
+</div>
+
+</div>
+
+</section>
+<!-- ĐĂNG NHẬP - ĐĂNG KÝ - LIÊN HỆ -->
+
+<section>
+
+<h2 class="section-title">
+Tài Khoản & Liên Hệ
+</h2>
+
+<div class="forms">
+
+<div class="form-box" id="login">
+
+<h3>Đăng Nhập</h3>
+
+<input type="text" id="loginUser" placeholder="Tên đăng nhập">
+
+<input type="password" id="loginPass" placeholder="Mật khẩu">
+
+<button onclick="login()">
+Đăng Nhập
+</button>
+
+</div>
+
+<div class="form-box" id="register">
+
+<h3>Đăng Ký Tài Khoản</h3>
+
+<input type="text" id="regName" placeholder="Họ và tên">
+
+<input type="email" id="regEmail" placeholder="Email">
+
+<input type="password" id="regPass" placeholder="Mật khẩu">
+
+<button onclick="register()">
+Đăng Ký
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Liên Hệ
+</h2>
+
+<div class="form-box">
+
+<input type="text" id="name" placeholder="Họ tên">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="text" id="phone" placeholder="Số điện thoại">
+
+<textarea rows="5" id="message" placeholder="Nội dung liên hệ"></textarea>
+
+<button onclick="sendContact()">
+Gửi Liên Hệ
+</button>
+
+</div>
+
+</section>
+
+<!-- MODAL CHI TIẾT -->
+
+<div class="modal" id="productModal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">
+&times;
+</span>
+
+<img id="modalImage">
+
+<h2 id="modalName"></h2>
+
+<h3 id="modalPrice" style="color:red"></h3>
+
+<p id="modalDesc"></p>
+
+<button onclick="addToCart()">
+Thêm Vào Giỏ Hàng
+</button>
+
+</div>
+
+</div>
+
+<!-- GIỎ HÀNG -->
+
+<section>
+
+<h2 class="section-title">
+Giỏ Hàng
+</h2>
+
+<div class="form-box">
+
+<h3>
+Số sản phẩm trong giỏ:
+<span id="cartCount">
+0
+</span>
+</h3>
+
+</div>
+
+</section>
+<footer>
+
+<h3>🌱 THỰC PHẨM SẠCH</h3>
+
+<p>
+Địa chỉ: Trà Vinh, Việt Nam
+</p>
+
+<p>
+Email: thucphamsach@gmail.com
+</p>
+
+<p>
+Hotline: 0123 456 789
+</p>
+
+<p>
+© 2026 Website Kinh Doanh Thực Phẩm Sạch
+</p>
+
+</footer>
+
+<script>
+
+let cart = 0;
+
+let searchInput =
+document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup",function(){
+
+let filter =
+this.value.toUpperCase();
+
+let products =
+document.querySelectorAll(".product");
+
+products.forEach(function(item){
+
+let txt =
+item.textContent || item.innerText;
+
+if(txt.toUpperCase().indexOf(filter)>-1){
+
+item.style.display="block";
+
+}else{
+
+item.style.display="none";
+
+}
+
+});
+
+});
+
+}
+
+function showProduct(name,price,desc,image){
+
+document.getElementById("productModal").style.display="block";
+
+document.getElementById("modalName").innerHTML=name;
+
+document.getElementById("modalPrice").innerHTML=price;
+
+document.getElementById("modalDesc").innerHTML=desc;
+
+document.getElementById("modalImage").src=image;
+
+}
+
+function closeModal(){
+
+document.getElementById("productModal").style.display="none";
+
+}
+
+function addToCart(){
+
+cart++;
+
+document.getElementById("cartCount").innerHTML=cart;
+
+alert("Đã thêm sản phẩm vào giỏ hàng");
+
+}
+
+function login(){
+
+let user =
+document.getElementById("loginUser").value;
+
+let pass =
+document.getElementById("loginPass").value;
+
+if(user==="" || pass===""){
+
+alert("Vui lòng nhập đầy đủ thông tin");
+
+return;
+
+}
+
+alert("Đăng nhập thành công");
+
+}
+
+function register(){
+
+let name =
+document.getElementById("regName").value;
+
+let email =
+document.getElementById("regEmail").value;
+
+let pass =
+document.getElementById("regPass").value;
+
+if(name==="" || email==="" || pass===""){
+
+alert("Vui lòng nhập đầy đủ thông tin");
+
+return;
+
+}
+
+alert("Đăng ký tài khoản thành công");
+
+}
+
+function sendContact(){
+
+let name =
+document.getElementById("name").value;
+
+let email =
+document.getElementById("email").value;
+
+let phone =
+document.getElementById("phone").value;
+
+let message =
+document.getElementById("message").value;
+
+if(name==="" || email==="" || phone==="" || message===""){
+
+alert("Vui lòng điền đầy đủ thông tin");
+
+return;
+
+}
+
+alert("Gửi liên hệ thành công");
+
+}
+
+window.onclick=function(event){
+
+let modal =
+document.getElementById("productModal");
+
+if(event.target==modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+</script>
+
+</body>
 </html>
